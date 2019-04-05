@@ -1,0 +1,35 @@
+; ASM TEMPLATE
+; ENZO PATERNO
+; 4/29/2013
+
+#include <p16f887.inc>
+
+count EQU 0x20
+
+	ORG 0
+	GOTO main
+	ORG 4
+	GOTO isr
+
+main:
+	BANKSEL ANSEL
+	CLRF ANSEL
+	BANKSEL TRISA
+	CLRF TRISA
+	BANKSEL PORTA
+	CLRF PORTA
+	BANKSEL count
+	CLRF count
+
+loop:
+	INCF count
+	MOVF count,0
+	MOVWF PORTA
+	GOTO loop
+
+isr:
+	NOP
+	RETFIE
+
+	END
+	
