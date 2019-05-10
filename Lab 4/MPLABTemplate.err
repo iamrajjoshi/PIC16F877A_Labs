@@ -1,0 +1,4 @@
+Message[301] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 4\P16F887.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 4\MPLABTEMPLATE.ASM 18 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 4\MPLABTEMPLATE.ASM 28 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 4\MPLABTEMPLATE.ASM 33 : Using default destination of 1 (file).

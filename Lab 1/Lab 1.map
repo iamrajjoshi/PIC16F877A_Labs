@@ -1,0 +1,43 @@
+MPLINK 4.35, Linker
+Linker Map File - Created Tue Apr 30 11:27:47 2019
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .org_1       code   0x000004    program   0x00003e
+                   .cinit    romdata   0x001800    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000004    0x000022      
+                            0x001800    0x001801      
+            34 out of 8453 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      isr   0x000021    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                     main   0x000014    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                    setup   0x000005    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                  turnOff   0x00001d    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                   turnOn   0x000019    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    setup   0x000005    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                     main   0x000014    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                   turnOn   0x000019    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                  turnOff   0x00001d    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+                      isr   0x000021    program     static C:\Users\JoshiR\Documents\Lab 1\MPLABTemplate.asm
+
+

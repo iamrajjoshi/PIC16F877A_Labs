@@ -1,0 +1,5 @@
+Message[301] C:\USERS\JOSHIR\DOCUMENTS\LAB 1\P16F887.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] C:\USERS\JOSHIR\DOCUMENTS\LAB 1\MPLABTEMPLATE.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\JOSHIR\DOCUMENTS\LAB 1\MPLABTEMPLATE.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\JOSHIR\DOCUMENTS\LAB 1\MPLABTEMPLATE.ASM 22 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\JOSHIR\DOCUMENTS\LAB 1\MPLABTEMPLATE.ASM 26 : Register in operand not in bank 0.  Ensure that bank bits are correct.

@@ -1,0 +1,80 @@
+; Lab 3
+; Raj Joshi & Arihant Gupta
+; 5/9/2019
+
+#include <p16f887.inc>
+
+LOWER_NIBBLE equ 0x20
+HIGHER_NIBBLE equ 0x21
+
+A_IS_GREATER equ 2
+A_IS_SMALLER equ 0
+A_IS_EQUAL equ  1
+
+	ORG 0x00
+	GOTO setup
+	ORG 0x04
+	GOTO isr
+
+setup:
+	
+	MOVLW 0xFF
+	BANKSEL TRISC
+	MOVWF TRISC
+	BANKSEL TRISB
+	CLRF TRISB
+	BANKSEL ANSEL
+	CLRF ANSEL
+	GOTO main
+
+main:
+	BANKSEL PORTB
+	CLRF PORTB
+	MOVF PORTC, 0
+	MOVWF LOWER_NIBBLE
+	MOVWF HIGHER_NIBBLE
+	GOTO number_setup
+
+evaluate:
+	MOVF LOWER_NIBBLE, 0
+	SUBWF HIGHER_NIBBLE, 0
+	BTFSC STATUS,Z
+	GOTO write_equal
+	BTFSC STATUS, C
+	GOTO write_greater
+	BTFSS STATUS, C
+	GOTO write_smaller
+
+number_setup:
+	BCF LOWER_NIBBLE, 4
+	BCF LOWER_NIBBLE, 5
+	BCF LOWER_NIBBLE, 6
+	BCF LOWER_NIBBLE, 7
+	SWAPF HIGHER_NIBBLE
+	BCF HIGHER_NIBBLE, 4
+	BCF HIGHER_NIBBLE, 5
+	BCF HIGHER_NIBBLE, 6
+	BCF HIGHER_NIBBLE, 7
+	GOTO evaluate
+
+write_equal:
+	BSF PORTB, A_IS_EQUAL
+	GOTO finish
+
+write_greater:
+	BSF PORTB, A_IS_GREATER
+	GOTO finish
+
+write_smaller:
+	bsf PORTB, A_IS_SMALLER
+	GOTO finish
+
+isr:
+	NOP
+	RETFIE
+
+finish:
+	NOP
+
+	END
+	
