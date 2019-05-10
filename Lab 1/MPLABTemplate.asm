@@ -27,7 +27,7 @@ setup:
 	
 main:
     BANKSEL PORTB
-	BTFSC PORTB, SWITCH_BIT 
+    BTFSC PORTB, SWITCH_BIT 
     GOTO turnOn
     GOTO turnOff
 
