@@ -1,5 +1,5 @@
 ; Lab 1
-; Raj JOshi & Arihant Gupta
+; Raj Joshi & Arihant Gupta
 ; 4/30/2019
 
 #include <p16f887.inc>
