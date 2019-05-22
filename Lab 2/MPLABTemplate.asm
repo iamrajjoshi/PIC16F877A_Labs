@@ -32,7 +32,7 @@ main:
 
 rotateLeft:
 	RLF PORTC
-    BTFSC STATUS, C
+    BTFSC PORTC, 7
 	CALL lastState
     GOTO main
 	
@@ -44,7 +44,7 @@ lastState:
 	
 rotateRight:
     RRF PORTC
-    BTFSC STATUS, C
+    BTFSC PORTC, 0
 	CALL firstState
     GOTO main
 	

@@ -1,12 +1,12 @@
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  1
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00001 ; Lab 4
+                      00001 ; Lab 2
                       00002 ; Raj Joshi & Arihant Gupta
-                      00003 ; 5/10/2019
+                      00003 ; 4/29/2019
                       00004 
                       00005 #include <p16f887.inc>
                       00001         LIST
@@ -20,52 +20,74 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
                       00789         LIST
                       00006 
-  00000020            00007 count EQU 0x20
+  00000000            00007 SWITCH_BIT EQU 0
                       00008 
-                      00009         ORG 0x00
-0000   2???           00010         GOTO main
-                      00011         ORG 0x04
-0004   2???           00012         GOTO isr
-                      00013 
-0005                  00014 main:
-                      00015         
-0005   3001           00016         MOVLW 0x01
-0006   1683 1303      00017         BANKSEL TRISC
+                      00009    ORG 0x0000
+0000   2???           00010    GOTO setup
+                      00011 
+0001                  00012 int:
+                      00013     ORG 0x004
+0004   2???           00014     GOTO isr
+                      00015 
+0005                  00016 setup:
+0005   3010           00017         MOVLW b'00010000'
+0006   0087           00018         MOVWF PORTC
+0007   1683 1303      00019     BANKSEL TRISB
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0008   0087           00018         MOVWF TRISC
-                      00019 
-                      00020 
-0009   1283 1303      00021         BANKSEL PORTC
-000B   0187           00022         CLRF PORTC
-                      00023 
-000C   1283 1303      00024         BANKSEL count
-000E   01A0           00025         CLRF count
+0009   1406           00020     BSF TRISB, SWITCH_BIT ; 1 is input
+000A   1683 1303      00021     BANKSEL TRISC
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000C   0187           00022     CLRF TRISC ; all LED outputs
+000D   1683 1703      00023         BANKSEL ANSEL
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000F   0188           00024     CLRF ANSEL ; digital I/O
+0010   1283 1303      00025     BANKSEL PORTB
                       00026 
-000F   1683 1703      00027         BANKSEL ANSEL
-Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0011   0188           00028         CLRF ANSEL
-                      00029 
-0012                  00030 loop:
-0012   1283 1303      00031         BANKSEL PORTC
-0014   1807           00032         BTFSC PORTC, 0
+0012                  00027 main:
 Message[305]: Using default destination of 1 (file).
-0015   0AA0           00033         INCF count
-0016   0820           00034         MOVF count,0
-0017   0087           00035         MOVWF PORTC
-0018   2???           00036         GOTO loop
-                      00037 
-0019                  00038 isr:
-0019   0000           00039         NOP
-001A   0009           00040         RETFIE
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  2
+0012   0886           00028         MOVF PORTB
+0013   1C06           00029     BTFSS PORTB, SWITCH_BIT 
+0014   2???           00030     GOTO rotateLeft ; switch=0, right to left
+0015   2???           00031     GOTO rotateRight ; switch=1, left to right
+                      00032 
+0016                  00033 rotateLeft:
+Message[305]: Using default destination of 1 (file).
+0016   0D87           00034         RLF PORTC
+0017   1803           00035     BTFSC STATUS, C
+0018   2???           00036         CALL lastState
+0019   2???           00037     GOTO main
+                      00038         
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00041 
-                      00042         END
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  3
+001A                  00039 lastState:
+001A   1387           00040         BCF PORTC, 7
+001B   3001           00041         MOVLW b'00000001'
+001C   0087           00042         MOVWF PORTC
+001D   0008           00043         RETURN
+                      00044         
+001E                  00045 rotateRight:
+Message[305]: Using default destination of 1 (file).
+001E   0C87           00046     RRF PORTC
+001F   1803           00047     BTFSC STATUS, C
+0020   2???           00048         CALL firstState
+0021   2???           00049     GOTO main
+                      00050         
+0022                  00051 firstState:
+0022   1007           00052         BCF PORTC, 0
+0023   3080           00053         MOVLW b'10000000'
+0024   0087           00054         MOVWF PORTC
+0025   0008           00055         RETURN
+                      00056 
+0026                  00057 isr:
+0026   0000           00058     NOP
+0027   0009           00059     RETFIE
+                      00060 
+                      00061         END
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  3
 
 
 SYMBOL TABLE
@@ -124,7 +146,7 @@ BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
 BRG9                              00000001
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  4
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  4
 
 
 SYMBOL TABLE
@@ -183,7 +205,7 @@ CHS2                              00000004
 CHS3                              00000005
 CKE                               00000006
 CKP                               00000004
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  5
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  5
 
 
 SYMBOL TABLE
@@ -242,7 +264,7 @@ IOCB0                             00000000
 IOCB1                             00000001
 IOCB2                             00000002
 IOCB3                             00000003
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  6
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  6
 
 
 SYMBOL TABLE
@@ -301,7 +323,7 @@ PDC2                              00000002
 PDC3                              00000003
 PDC4                              00000004
 PDC5                              00000005
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  7
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  7
 
 
 SYMBOL TABLE
@@ -360,7 +382,7 @@ RC4                               00000004
 RC5                               00000005
 RC6                               00000006
 RC7                               00000007
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  8
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  8
 
 
 SYMBOL TABLE
@@ -419,7 +441,7 @@ SSPIE                             00000003
 SSPIF                             00000003
 SSPM0                             00000000
 SSPM1                             00000001
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE  9
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE  9
 
 
 SYMBOL TABLE
@@ -437,6 +459,7 @@ STRC                              00000002
 STRD                              00000003
 STRSYNC                           00000004
 SWDTEN                            00000000
+SWITCH_BIT                        00000000
 SYNC                              00000004
 T0CS                              00000005
 T0IE                              00000005
@@ -477,13 +500,13 @@ TRISA0                            00000000
 TRISA1                            00000001
 TRISA2                            00000002
 TRISA3                            00000003
-TRISA4                            00000004
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE 10
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TRISA4                            00000004
 TRISA5                            00000005
 TRISA6                            00000006
 TRISA7                            00000007
@@ -536,13 +559,13 @@ TXREG                             00000019
 TXSTA                             00000098
 UA                                00000001
 ULPWUE                            00000005
-ULPWUIE                           00000002
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE 11
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+ULPWUIE                           00000002
 ULPWUIF                           00000002
 VCFG0                             00000004
 VCFG1                             00000005
@@ -595,13 +618,13 @@ _EC_OSC                           00003FFB
 _EXTRC                            00003FFF
 _EXTRCIO                          00003FFE
 _EXTRC_OSC_CLKOUT                 00003FFF
-_EXTRC_OSC_NOCLKOUT               00003FFE
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-21-2019  18:22:46         PAGE 12
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-20-2019  21:35:23         PAGE 12
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+_EXTRC_OSC_NOCLKOUT               00003FFE
 _FCMEN_OFF                        000037FF
 _FCMEN_ON                         00003FFF
 _HS_OSC                           00003FFA
@@ -629,15 +652,19 @@ _WRT_256                          00003DFF
 _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
-__16F877A                         00000001
+__16F877                          00000001
 __DEBUG                           1
-count                             00000020
-isr                               00000019
-loop                              00000012
-main                              00000005
+firstState                        00000022
+int                               00000001
+isr                               00000026
+lastState                         0000001A
+main                              00000012
+rotateLeft                        00000016
+rotateRight                       0000001E
+setup                             00000005
 
 Errors   :     0
 Warnings :     0 reported,     0 suppressed
-Messages :     4 reported,     0 suppressed
+Messages :     7 reported,     0 suppressed
 
 

@@ -1,5 +1,5 @@
 MPLINK 4.35, Linker
-Linker Map File - Created Tue Apr 30 17:09:51 2019
+Linker Map File - Created Mon May 20 21:35:24 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -23,27 +23,27 @@ Linker Map File - Created Tue Apr 30 17:09:51 2019
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-               firstState   0x000022    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                      int   0x000001    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                      isr   0x000026    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                lastState   0x00001a    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                     main   0x000012    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-               rotateLeft   0x000016    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-              rotateRight   0x00001e    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
+               firstState   0x000022    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                      int   0x000001    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                      isr   0x000026    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                lastState   0x00001a    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                     main   0x000012    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+               rotateLeft   0x000016    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+              rotateRight   0x00001e    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                      int   0x000001    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                     main   0x000012    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-               rotateLeft   0x000016    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                lastState   0x00001a    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-              rotateRight   0x00001e    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-               firstState   0x000022    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
-                      isr   0x000026    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 2\MPLABTemplate.asm
+                      int   0x000001    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                     main   0x000012    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+               rotateLeft   0x000016    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                lastState   0x00001a    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+              rotateRight   0x00001e    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+               firstState   0x000022    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
+                      isr   0x000026    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 2\MPLABTemplate.asm
 
 
