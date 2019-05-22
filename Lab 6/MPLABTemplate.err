@@ -1,0 +1,5 @@
+Message[301] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 6\P16F887.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 6\MPLABTEMPLATE.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 6\MPLABTEMPLATE.ASM 21 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 6\MPLABTEMPLATE.ASM 24 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 6\MPLABTEMPLATE.ASM 27 : Register in operand not in bank 0.  Ensure that bank bits are correct.
