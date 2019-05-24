@@ -1,4 +1,4 @@
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  1
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 0017                  00038 evaluate:
 0017   0820           00039         MOVF LOWER_NIBBLE, 0
 0018   0221           00040         SUBWF HIGHER_NIBBLE, 0
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  2
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -103,7 +103,7 @@ Message[305]: Using default destination of 1 (file).
 0031   0000           00077         NOP
                       00078 
                       00079         END
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  3
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  3
 
 
 SYMBOL TABLE
@@ -162,7 +162,7 @@ BRG3                              00000003
 BRG4                              00000004
 BRG5                              00000005
 BRG6                              00000006
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  4
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  4
 
 
 SYMBOL TABLE
@@ -221,7 +221,7 @@ CCPR2L                            0000001B
 CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  5
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  5
 
 
 SYMBOL TABLE
@@ -280,7 +280,7 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IOCB                              00000096
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  6
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  6
 
 
 SYMBOL TABLE
@@ -339,7 +339,7 @@ PCL                               00000002
 PCLATH                            0000000A
 PCON                              0000008E
 PDC0                              00000000
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  7
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  7
 
 
 SYMBOL TABLE
@@ -398,7 +398,7 @@ RBIF                              00000000
 RC0                               00000000
 RC1                               00000001
 RC2                               00000002
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  8
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  8
 
 
 SYMBOL TABLE
@@ -457,7 +457,7 @@ SSPADD                            00000093
 SSPBUF                            00000013
 SSPCON                            00000014
 SSPCON2                           00000091
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE  9
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE  9
 
 
 SYMBOL TABLE
@@ -516,7 +516,7 @@ TOUTPS1                           00000004
 TOUTPS2                           00000005
 TOUTPS3                           00000006
 TRISA                             00000085
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE 10
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE 10
 
 
 SYMBOL TABLE
@@ -575,7 +575,7 @@ TXD8                              00000000
 TXEN                              00000005
 TXIE                              00000004
 TXIF                              00000004
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE 11
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE 11
 
 
 SYMBOL TABLE
@@ -634,7 +634,7 @@ _CP_ON                            00003FBF
 _DEBUG_OFF                        00003FFF
 _DEBUG_ON                         00001FFF
 _DEVID1                           00002006
-MPASM  5.35                 MPLABTEMPLATE.ASM   5-10-2019  17:04:59         PAGE 12
+MPASM  5.35                 MPLABTEMPLATE.ASM   5-23-2019  11:44:23         PAGE 12
 
 
 SYMBOL TABLE

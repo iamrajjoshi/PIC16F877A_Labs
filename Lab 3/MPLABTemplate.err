@@ -1,5 +1,5 @@
-Message[301] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 3\P16F887.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
-Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 3\MPLABTEMPLATE.ASM 23 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 3\MPLABTEMPLATE.ASM 25 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 3\MPLABTEMPLATE.ASM 27 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\LAB 8 PIC16F887\LAB 3\MPLABTEMPLATE.ASM 53 : Using default destination of 1 (file).
+Message[301] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 3\P16F887.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 3\MPLABTEMPLATE.ASM 23 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 3\MPLABTEMPLATE.ASM 25 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 3\MPLABTEMPLATE.ASM 27 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 3\MPLABTEMPLATE.ASM 53 : Using default destination of 1 (file).

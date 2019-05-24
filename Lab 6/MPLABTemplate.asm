@@ -31,51 +31,51 @@ main:
 	CLRF PORTC
 	CLRF key_pressed
 
-test_keys:
+test_keys:;common anode, msb is g lsb is a
 	MOVF key_pressed, 0
 	
 	BSF PORTB, 0 ;testing column 4
 	BTFSC PORTB, 4 ;check row 4
-	MOVLW 0x0D
+	MOVLW b'10100001';0x0D
 	BTFSC PORTB, 5 ;check row 3
-	MOVLW 0x0E
+	MOVLW b'10000110';0x0E
 	BTFSC PORTB, 6 ;check row 2
-	MOVLW 0x0F
+	MOVLW b'10001110';0x0F
 	BTFSC PORTB, 7 ;check row 1
-	MOVLW 0x00
+	MOVLW b'11000000';0x00
 	BCF PORTB, 0
 	
 	BSF PORTB, 1 ;testing column 3
 	BTFSC PORTB, 4 ;check row 4
-	MOVLW 0x0C
+	MOVLW b'11000110';0x0C
 	BTFSC PORTB, 5 ;check row 3
-	MOVLW 0x09
+	MOVLW b'10011000';0x09
 	BTFSC PORTB, 6 ;check row 2
-	MOVLW 0x08
+	MOVLW b'10000000';0x08
 	BTFSC PORTB, 7 ;check row 1
-	MOVLW 0x07
+	MOVLW b'11111000';0x07
 	BCF PORTB, 1
 
 	BSF PORTB, 2 ;testing column 2
 	BTFSC PORTB, 4 ;check row 4
-	MOVLW 0x0B
+	MOVLW b'10000011';0x0B
 	BTFSC PORTB, 5 ;check row 3
-	MOVLW 0x06
+	MOVLW b'10000010';0x06
 	BTFSC PORTB, 6 ;check row 2
-	MOVLW 0x05
+	MOVLW b'10010010';0x05
 	BTFSC PORTB, 7 ;check row 1
-	MOVLW 0x04
+	MOVLW b'10011001';0x04
 	BCF PORTB, 2
 
 	BSF PORTB, 3 ;testing column 1
 	BTFSC PORTB, 4 ;check row 4
-	MOVLW 0x0A
+	MOVLW b'10001000';0x0A
 	BTFSC PORTB, 5 ;check row 3
-	MOVLW 0x03
+	MOVLW b'10110000'0x03
 	BTFSC PORTB, 6 ;check row 2
-	MOVLW 0x02
+	MOVLW b'10100100';0x02
 	BTFSC PORTB, 7 ;check row 1
-	MOVLW 0x01
+	MOVLW b'11001111';0x01
 	BCF PORTB, 3
 
 	MOVWF key_pressed

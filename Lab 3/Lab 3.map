@@ -1,5 +1,5 @@
 MPLINK 4.35, Linker
-Linker Map File - Created Fri May 10 17:04:59 2019
+Linker Map File - Created Thu May 23 11:44:24 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -23,29 +23,29 @@ Linker Map File - Created Fri May 10 17:04:59 2019
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                 evaluate   0x000017    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                   finish   0x000031    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                      isr   0x00002f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                     main   0x000010    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-             number_setup   0x00001f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-              write_equal   0x000029    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-            write_greater   0x00002b    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-            write_smaller   0x00002d    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
+                 evaluate   0x000017    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                   finish   0x000031    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                      isr   0x00002f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                     main   0x000010    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+             number_setup   0x00001f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+              write_equal   0x000029    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+            write_greater   0x00002b    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+            write_smaller   0x00002d    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                     main   0x000010    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                 evaluate   0x000017    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-             number_setup   0x00001f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-              write_equal   0x000029    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-            write_greater   0x00002b    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-            write_smaller   0x00002d    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                      isr   0x00002f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
-                   finish   0x000031    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.asm
+                    setup   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                     main   0x000010    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                 evaluate   0x000017    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+             number_setup   0x00001f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+              write_equal   0x000029    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+            write_greater   0x00002b    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+            write_smaller   0x00002d    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                      isr   0x00002f    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
+                   finish   0x000031    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.asm
 
 

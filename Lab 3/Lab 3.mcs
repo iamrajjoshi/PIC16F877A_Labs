@@ -2,7 +2,7 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
-Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.o
+Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.o
 Folder=Intermediary
 DeviceName=PIC16F877A
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -15,7 +15,7 @@ ToolArgsString=
 TraceCmdString=
 DebugOptions=/d__DEBUG=1
 [File001]
-Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.err
+Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.err
 Folder=Intermediary
 DeviceName=PIC16F877A
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -28,7 +28,7 @@ ToolArgsString=
 TraceCmdString=
 DebugOptions=/d__DEBUG=1
 [File002]
-Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\MPLABTemplate.lst
+Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\MPLABTemplate.lst
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -41,7 +41,7 @@ ToolArgsString=
 TraceCmdString=
 DebugOptions=/d__DEBUG=1
 [File003]
-Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\Lab 3.cof
+Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\Lab 3.cof
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -54,7 +54,7 @@ ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
 [File004]
-Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\Lab 8 PIC16F887\Lab 3\Lab 3.hex
+Location=C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 3\Lab 3.hex
 Folder=Output
 DeviceName=PIC16F877A
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
