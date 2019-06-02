@@ -1,11 +1,11 @@
 MPLINK 4.35, Linker
-Linker Map File - Created Wed May 22 18:24:47 2019
+Linker Map File - Created Sat Jun 01 11:14:21 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                    .org_0       code   0x000000    program   0x000002
-                   .org_1       code   0x000004    program   0x000082
+                   .org_1       code   0x000004    program   0x000088
                    .cinit    romdata   0x001800    program   0x000004
 
 
@@ -14,18 +14,18 @@ Linker Map File - Created Wed May 22 18:24:47 2019
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000000      
-                            0x000004    0x000044      
+                            0x000004    0x000047      
                             0x001800    0x001801      
-            68 out of 8453 program addresses used, program memory utilization is 0%
+            71 out of 8453 program addresses used, program memory utilization is 0%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                      isr   0x000043    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
+                      isr   0x000046    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
                      main   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
-                test_keys   0x000017    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
+                test_keys   0x00001c    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
 
 
 
@@ -33,7 +33,7 @@ Linker Map File - Created Wed May 22 18:24:47 2019
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
                      main   0x000005    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
-                test_keys   0x000017    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
-                      isr   0x000043    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
+                test_keys   0x00001c    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
+                      isr   0x000046    program     static C:\Users\geeky\MEGA\Workspace\MPLAB IDE\PIC16F877A\Lab 6\MPLABTemplate.asm
 
 
