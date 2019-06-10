@@ -1,0 +1,12 @@
+Message[301] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\P16F887.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 22 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 35 : Using default destination of 1 (file).
+Warning[207] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 41 : Found label after column 1. (bigloop)
+Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 43 : Using default destination of 1 (file).
+Warning[207] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 51 : Found label after column 1. (outerloop)
+Warning[207] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 54 : Found label after column 1. (innerloop)
+Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 57 : Using default destination of 1 (file).
+Message[305] C:\USERS\GEEKY\MEGA\WORKSPACE\MPLAB IDE\PIC16F877A\LAB 7\MPLABTEMPLATE.ASM 60 : Using default destination of 1 (file).
