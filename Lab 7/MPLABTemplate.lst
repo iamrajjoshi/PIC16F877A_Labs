@@ -1,4 +1,4 @@
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  1
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -19,31 +19,31 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00008 
 Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
                       00789         LIST
-  00000020            00006 onesec_counter equ 0x20
-  00000021            00007 outer_counter equ 0x21
-  00000022            00008 inner_counter equ 0x22
-                      00009 
-                      00010         ORG 0
-0000   2???           00011         GOTO main
-                      00012         ORG 4
-0004   2???           00013         GOTO isr
-                      00014 
-0005                  00015 main:
-0005   1683 1703      00016         BANKSEL ANSELH
+                      00006 
+  00000020            00007 onesec_counter equ 0x20
+  00000021            00008 outer_counter equ 0x21
+  00000022            00009 inner_counter equ 0x22
+                      00010 
+                      00011         ORG 0x00
+0000   2???           00012         GOTO main
+                      00013         ORG 0x04
+0004   2???           00014         GOTO isr
+                      00015 
+0005                  00016 main:
+0005   1683 1703      00017         BANKSEL ANSELH
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0007   0189           00017         CLRF ANSELH
-0008   1683 1303      00018         BANKSEL TRISB
+0007   0189           00018         CLRF ANSELH
+0008   1683 1303      00019         BANKSEL TRISB
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000A   0186           00019         CLRF TRISB
+000A   0186           00020         CLRF TRISB
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000B   1406           00020         BSF TRISB, RB0
-000C   160B           00021         BSF INTCON, INTE
+000B   1406           00021         BSF TRISB, RB0
+000C   160B           00022         BSF INTCON, INTE
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000D   1701           00022         BSF OPTION_REG, INTEDG
-000E   1283 1303      00023         BANKSEL PORTB
-0010   0186           00024         CLRF PORTB
-0011   178B           00025         BSF INTCON, GIE
-                      00026         ;initilize the inturrpt stuff
+000D   1701           00023         BSF OPTION_REG, INTEDG
+000E   1283 1303      00024         BANKSEL PORTB
+0010   0186           00025         CLRF PORTB
+0011   178B           00026         BSF INTCON, GIE
                       00027 
 0012                  00028 loop:
 0012   0000           00029         NOP
@@ -51,51 +51,51 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00031 
 0014                  00032 isr:
 0014   108B           00033         BCF INTCON, INTF
-                      00034         ;CALL onesec_delay
+0015   2???           00034         CALL onesec_delay
 Message[305]: Using default destination of 1 (file).
-0015   0A86           00035         INCF PORTB
-0016   0009           00036         RETFIE
+0016   0A86           00035         INCF PORTB
+0017   0009           00036         RETFIE
                       00037 
-0017                  00038 onesec_delay: ;do the smaller delay 20 times (50000*20 = 1,000,000 usec --> 1 second    
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  2
+0018                  00038 onesec_delay: ;do the smaller delay 20 times (50000*20 = 1,000,000 usec --> 1 second    
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-0017   3014           00039         MOVLW D'20' 
-0018   00A0           00040         MOVWF onesec_counter
+0018   3014           00039         MOVLW D'20' 
+0019   00A0           00040         MOVWF onesec_counter
 Warning[207]: Found label after column 1. (bigloop)
-0019                  00041         bigloop:
-0019   2???           00042                 CALL smaller_delay
+001A                  00041         bigloop:
+001A   2???           00042                 CALL smaller_delay
 Message[305]: Using default destination of 1 (file).
-001A   0BA0           00043                 DECFSZ onesec_counter
-001B   2???           00044                 GOTO bigloop
-001C   0008           00045         RETURN
+001B   0BA0           00043                 DECFSZ onesec_counter
+001C   2???           00044                 GOTO bigloop
+001D   0008           00045         RETURN
                       00046 
-001D                  00047 smaller_delay: ; so its 200 times of 5 microseconds --> 1000 * 50 times = 50000
-001D   3032           00048         MOVLW D'50'
-001E   00A1           00049         MOVWF outer_counter
+001E                  00047 smaller_delay: ; so its 200 times of 5 microseconds --> 1000 * 50 times = 50000
+001E   3032           00048         MOVLW D'50'
+001F   00A1           00049         MOVWF outer_counter
                       00050 
 Warning[207]: Found label after column 1. (outerloop)
-001F                  00051         outerloop:
-001F   30C8           00052                 MOVLW D'200'
-0020   00A2           00053                 MOVWF inner_counter
+0020                  00051         outerloop:
+0020   30C8           00052                 MOVLW D'200'
+0021   00A2           00053                 MOVWF inner_counter
 Warning[207]: Found label after column 1. (innerloop)
-0021                  00054         innerloop:
-0021   0000           00055                 nop
-0022   0000           00056                 nop
+0022                  00054         innerloop:
+0022   0000           00055                 nop
+0023   0000           00056                 nop
 Message[305]: Using default destination of 1 (file).
-0023   0BA2           00057                 DECFSZ inner_counter
-0024   2???           00058                 GOTO innerloop
+0024   0BA2           00057                 DECFSZ inner_counter
+0025   2???           00058                 GOTO innerloop
                       00059                 
 Message[305]: Using default destination of 1 (file).
-0025   0BA1           00060                 DECFSZ outer_counter
-0026   2???           00061                 GOTO outerloop
-0027   0008           00062         RETURN
+0026   0BA1           00060                 DECFSZ outer_counter
+0027   2???           00061                 GOTO outerloop
+0028   0008           00062         RETURN
                       00063 
                       00064         END
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  3
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  3
 
 
 SYMBOL TABLE
@@ -154,7 +154,7 @@ BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
 BRG9                              00000001
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  4
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  4
 
 
 SYMBOL TABLE
@@ -213,7 +213,7 @@ CHS2                              00000004
 CHS3                              00000005
 CKE                               00000006
 CKP                               00000004
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  5
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  5
 
 
 SYMBOL TABLE
@@ -272,7 +272,7 @@ IOCB0                             00000000
 IOCB1                             00000001
 IOCB2                             00000002
 IOCB3                             00000003
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  6
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  6
 
 
 SYMBOL TABLE
@@ -331,7 +331,7 @@ PDC2                              00000002
 PDC3                              00000003
 PDC4                              00000004
 PDC5                              00000005
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  7
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  7
 
 
 SYMBOL TABLE
@@ -390,7 +390,7 @@ RC4                               00000004
 RC5                               00000005
 RC6                               00000006
 RC7                               00000007
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  8
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  8
 
 
 SYMBOL TABLE
@@ -449,7 +449,7 @@ SSPIE                             00000003
 SSPIF                             00000003
 SSPM0                             00000000
 SSPM1                             00000001
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE  9
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE  9
 
 
 SYMBOL TABLE
@@ -508,7 +508,7 @@ TRISA1                            00000001
 TRISA2                            00000002
 TRISA3                            00000003
 TRISA4                            00000004
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE 10
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE 10
 
 
 SYMBOL TABLE
@@ -567,7 +567,7 @@ TXSTA                             00000098
 UA                                00000001
 ULPWUE                            00000005
 ULPWUIE                           00000002
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE 11
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE 11
 
 
 SYMBOL TABLE
@@ -626,7 +626,7 @@ _EXTRC                            00003FFF
 _EXTRCIO                          00003FFE
 _EXTRC_OSC_CLKOUT                 00003FFF
 _EXTRC_OSC_NOCLKOUT               00003FFE
-MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  9:20:58         PAGE 12
+MPASM  5.35                 MPLABTEMPLATE.ASM   6-10-2019  11:43:59         PAGE 12
 
 
 SYMBOL TABLE
@@ -661,17 +661,18 @@ _WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F877A                         00000001
 __DEBUG                           1
-bigloop                           00000019
+__MPLAB_DEBUGGER_PICKIT2          1
+bigloop                           0000001A
 inner_counter                     00000022
-innerloop                         00000021
+innerloop                         00000022
 isr                               00000014
 loop                              00000012
 main                              00000005
 onesec_counter                    00000020
-onesec_delay                      00000017
+onesec_delay                      00000018
 outer_counter                     00000021
-outerloop                         0000001F
-smaller_delay                     0000001D
+outerloop                         00000020
+smaller_delay                     0000001E
 
 Errors   :     0
 Warnings :     3 reported,     0 suppressed

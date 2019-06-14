@@ -3,13 +3,14 @@
 ; 6/10/19
 
 #include <p16f887.inc>
+
 onesec_counter equ 0x20
 outer_counter equ 0x21
 inner_counter equ 0x22
 
-	ORG 0
+	ORG 0x00
 	GOTO main
-	ORG 4
+	ORG 0x04
 	GOTO isr
 
 main:
